@@ -90,7 +90,7 @@ func schemaOfField(f *descriptor.Field, reg *descriptor.Registry) swaggerSchemaO
 	}
 
 	switch ft := fd.GetType(); ft {
-	case pbdescriptor.FieldDescriptorProto_TYPE_ENUM, pbdescriptor.FieldDescriptorProto_TYPE_MESSAGE, pbdescriptor.FieldDescriptorProto_TYPE_GROUP:
+	case pbdescriptor.FieldDescriptorProto_TYPE_MESSAGE, pbdescriptor.FieldDescriptorProto_TYPE_GROUP:
 		core = schemaCore{
 			Ref: "#/definitions/" + fullyQualifiedNameToSwaggerName(fd.GetTypeName(), reg),
 		}
@@ -157,6 +157,8 @@ func primitiveSchema(t pbdescriptor.FieldDescriptorProto_Type) (ftype, format st
 		return "integer", "int32", true
 	case pbdescriptor.FieldDescriptorProto_TYPE_SINT64:
 		return "integer", "int64", true
+	case pbdescriptor.FieldDescriptorProto_TYPE_ENUM:
+		return "string", "string", true
 	default:
 		return "", "", false
 	}
@@ -308,8 +310,8 @@ func renderServices(services []*descriptor.Service, paths swaggerPathsObject, re
 					case pbdescriptor.FieldDescriptorProto_TYPE_GROUP, pbdescriptor.FieldDescriptorProto_TYPE_MESSAGE:
 						return fmt.Errorf("only primitive types are allowed in path parameters")
 					case pbdescriptor.FieldDescriptorProto_TYPE_ENUM:
-						paramType = fullyQualifiedNameToSwaggerName(parameter.Target.GetTypeName(), reg)
-						paramFormat = ""
+						paramType = "string"
+						paramFormat = "string"
 					default:
 						var ok bool
 						paramType, paramFormat, ok = primitiveSchema(pt)
@@ -409,7 +411,7 @@ func applyTemplate(p param) (string, error) {
 	e := enumMap{}
 	findServicesMessagesAndEnumerations(p.Services, p.reg, m, e)
 	renderMessagesAsDefinition(m, s.Definitions, p.reg)
-	renderEnumerationsAsDefinition(e, s.Definitions, p.reg)
+	// renderEnumerationsAsDefinition(e, s.Definitions, p.reg)
 
 	// We now have rendered the entire swagger object. Write the bytes out to a
 	// string so it can be written to disk.
