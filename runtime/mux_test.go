@@ -7,8 +7,8 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/gengo/grpc-gateway/runtime"
-	"github.com/gengo/grpc-gateway/utilities"
+	"github.com/fabware/grpc-gateway/runtime"
+	"github.com/fabware/grpc-gateway/utilities"
 )
 
 func TestMuxServeHTTP(t *testing.T) {

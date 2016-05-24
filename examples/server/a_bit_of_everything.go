@@ -5,9 +5,9 @@ import (
 	"io"
 	"sync"
 
-	examples "github.com/gengo/grpc-gateway/examples/examplepb"
-	sub "github.com/gengo/grpc-gateway/examples/sub"
-	sub2 "github.com/gengo/grpc-gateway/examples/sub2"
+	examples "github.com/fabware/grpc-gateway/examples/examplepb"
+	sub "github.com/fabware/grpc-gateway/examples/sub"
+	sub2 "github.com/fabware/grpc-gateway/examples/sub2"
 	"github.com/golang/glog"
 	"github.com/rogpeppe/fastuuid"
 	"golang.org/x/net/context"

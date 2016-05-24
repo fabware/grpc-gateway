@@ -7,9 +7,9 @@ package examplepb
 import proto "github.com/golang/protobuf/proto"
 import fmt "fmt"
 import math "math"
-import _ "github.com/gengo/grpc-gateway/third_party/googleapis/google/api"
-import gengo_grpc_gateway_examples_sub "github.com/gengo/grpc-gateway/examples/sub"
-import sub2 "github.com/gengo/grpc-gateway/examples/sub2"
+import _ "github.com/fabware/grpc-gateway/third_party/googleapis/google/api"
+import gengo_grpc_gateway_examples_sub "github.com/fabware/grpc-gateway/examples/sub"
+import sub2 "github.com/fabware/grpc-gateway/examples/sub2"
 
 import (
 	context "golang.org/x/net/context"

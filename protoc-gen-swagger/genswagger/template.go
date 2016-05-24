@@ -8,7 +8,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/gengo/grpc-gateway/protoc-gen-grpc-gateway/descriptor"
+	"github.com/fabware/grpc-gateway/protoc-gen-grpc-gateway/descriptor"
 	pbdescriptor "github.com/golang/protobuf/protoc-gen-go/descriptor"
 )
 
@@ -298,7 +298,7 @@ func renderServices(services []*descriptor.Service, paths swaggerPathsObject, re
 	for _, svc := range services {
 		for _, meth := range svc.Methods {
 			if meth.GetClientStreaming() || meth.GetServerStreaming() {
-				return fmt.Errorf(`service uses streaming, which is not currently supported. Maybe you would like to implement it? It wouldn't be that hard and we don't bite. Why don't you send a pull request to https://github.com/gengo/grpc-gateway?`)
+				return fmt.Errorf(`service uses streaming, which is not currently supported. Maybe you would like to implement it? It wouldn't be that hard and we don't bite. Why don't you send a pull request to https://github.com/fabware/grpc-gateway?`)
 			}
 			for _, b := range meth.Bindings {
 				// Iterate over all the swagger parameters

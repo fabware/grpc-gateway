@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/gengo/grpc-gateway/utilities"
+	"github.com/fabware/grpc-gateway/utilities"
 	"google.golang.org/grpc/grpclog"
 )
 

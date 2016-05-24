@@ -1,7 +1,7 @@
 package genswagger
 
 import (
-	"github.com/gengo/grpc-gateway/protoc-gen-grpc-gateway/descriptor"
+	"github.com/fabware/grpc-gateway/protoc-gen-grpc-gateway/descriptor"
 )
 
 type param struct {

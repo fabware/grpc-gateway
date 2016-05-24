@@ -1,7 +1,7 @@
 package httprule
 
 import (
-	"github.com/gengo/grpc-gateway/utilities"
+	"github.com/fabware/grpc-gateway/utilities"
 )
 
 const (

@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/gengo/grpc-gateway/utilities"
+	"github.com/fabware/grpc-gateway/utilities"
 )
 
 const (

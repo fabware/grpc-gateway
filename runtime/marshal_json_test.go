@@ -7,8 +7,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/gengo/grpc-gateway/examples/examplepb"
-	"github.com/gengo/grpc-gateway/runtime"
+	"github.com/fabware/grpc-gateway/examples/examplepb"
+	"github.com/fabware/grpc-gateway/runtime"
 	"github.com/golang/protobuf/proto"
 	"github.com/golang/protobuf/ptypes/empty"
 	structpb "github.com/golang/protobuf/ptypes/struct"

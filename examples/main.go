@@ -4,8 +4,8 @@ import (
 	"flag"
 	"net/http"
 
-	"github.com/gengo/grpc-gateway/examples/examplepb"
-	"github.com/gengo/grpc-gateway/runtime"
+	"github.com/fabware/grpc-gateway/examples/examplepb"
+	"github.com/fabware/grpc-gateway/runtime"
 	"github.com/golang/glog"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"

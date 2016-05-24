@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/gengo/grpc-gateway/runtime"
+	"github.com/fabware/grpc-gateway/runtime"
 )
 
 func TestMarshalerForRequest(t *testing.T) {

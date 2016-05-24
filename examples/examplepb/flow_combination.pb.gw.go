@@ -13,8 +13,8 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/gengo/grpc-gateway/runtime"
-	"github.com/gengo/grpc-gateway/utilities"
+	"github.com/fabware/grpc-gateway/runtime"
+	"github.com/fabware/grpc-gateway/utilities"
 	"github.com/golang/protobuf/proto"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
